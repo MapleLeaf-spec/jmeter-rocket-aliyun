@@ -17,11 +17,9 @@ import java.io.Serializable;
  *
  * @author zhangzheqi
  */
-public class MessageService implements Serializable {
+public class MessageService {
     private static final Logger log = LoggerFactory.getLogger(MessageService.class);
-
-    @Serial
-    private static final long serialVersionUID = 1L;
+    
     private final transient Producer producer; // 将生产者对象提升为成员变量，避免重复创建和启动
 
     public MessageService(Producer existingProducer) {
